@@ -27,6 +27,10 @@ melos:
       run: melos exec -- "dart test"
       description: Run tests across all packages.
 
+    serve:web:
+      run: melos exec --scope="personal_budget_web" -- "dart run jaspr_cli:jaspr serve --port 8086 --web-port 5468 --proxy-port 5568"
+      description: Run the Jaspr web server for personal_budget_web.
+
 dependency_overrides:
   meta: ^1.18.0
   analyzer: ^12.1.0
