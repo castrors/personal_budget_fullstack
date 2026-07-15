@@ -1,25 +1,25 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
-import 'package:jaspr_router/jaspr_router.dart';
 
 import '../constants/theme.dart';
 
-@client
 class Header extends StatelessComponent {
   const Header({super.key});
 
   @override
   Component build(BuildContext context) {
     var activePath = context.url;
+    final basePath = context.binding.basePath;
+    final prefix = basePath.endsWith('/') ? basePath.substring(0, basePath.length - 1) : basePath;
 
     return header([
       nav([
         for (var route in [
-          (label: 'Home', path: '/'),
-          (label: 'About', path: '/about'),
+          (label: 'Home', path: '/', target: prefix + '/'),
+          (label: 'About', path: '/about', target: prefix + '/about'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
-            Link(to: route.path, child: text(route.label)),
+            a(href: route.target, [text(route.label)]),
           ]),
       ]),
     ]);
