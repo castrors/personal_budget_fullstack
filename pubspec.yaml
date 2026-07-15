@@ -1,0 +1,32 @@
+name: personal_budget_fullstack
+description: Monorepo for personal budget fullstack project
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.11.0 <4.0.0'
+
+workspace:
+  - packages/personal_budget_core
+  - packages/personal_budget_api
+  - packages/personal_budget_ui
+  - packages/personal_budget_ui/widgetbook
+  - packages/personal_budget_app
+  - packages/personal_budget_web
+
+dev_dependencies:
+  melos: ^8.2.2
+
+melos:
+  scripts:
+    analyze:
+      run: melos exec -- "dart analyze ."
+      description: Run analytical checks across all packages.
+
+    test:
+      run: melos exec -- "dart test"
+      description: Run tests across all packages.
+
+dependency_overrides:
+  meta: ^1.18.0
+  analyzer: ^12.1.0
