@@ -31,6 +31,10 @@ melos:
       run: melos exec --scope="personal_budget_web" -- "dart run jaspr_cli:jaspr serve --port 8086 --web-port 5468 --proxy-port 5568"
       description: Run the Jaspr web server for personal_budget_web.
 
+    build:web:
+      run: melos exec --scope="personal_budget_web" -- "dart run jaspr_cli:jaspr build"
+      description: Build the static Jaspr site for production.
+
 dependency_overrides:
   meta: ^1.18.0
   analyzer: ^12.1.0
