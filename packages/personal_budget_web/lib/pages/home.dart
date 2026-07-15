@@ -1,5 +1,6 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
+import 'package:jaspr_router/jaspr_router.dart';
 
 @client
 class Home extends StatelessComponent {
@@ -25,10 +26,10 @@ class Home extends StatelessComponent {
               target: Target.blank,
               [text('Ver no GitHub')]
             ),
-            a(
+            Link(
               classes: 'btn btn-secondary',
-              href: 'about',
-              [text('Saber Mais')]
+              to: '/about',
+              child: text('Saber Mais')
             ),
           ]),
         ]),
