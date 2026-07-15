@@ -1,6 +1,7 @@
 import 'package:jaspr/dom.dart';
 import 'package:jaspr/jaspr.dart';
 
+import '../constants/config.dart';
 import '../constants/theme.dart';
 
 class Header extends StatelessComponent {
@@ -9,14 +10,12 @@ class Header extends StatelessComponent {
   @override
   Component build(BuildContext context) {
     var activePath = context.url;
-    final basePath = context.binding.basePath;
-    final prefix = basePath.endsWith('/') ? basePath.substring(0, basePath.length - 1) : basePath;
 
     return header([
       nav([
         for (var route in [
-          (label: 'Home', path: '/', target: prefix + '/'),
-          (label: 'About', path: '/about', target: prefix + '/about'),
+          (label: 'Home', path: '/', target: '$basePath/'),
+          (label: 'About', path: '/about', target: '$basePath/about'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
             a(href: route.target, [text(route.label)]),

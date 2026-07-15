@@ -32,7 +32,7 @@ melos:
       description: Run the Jaspr web server for personal_budget_web.
 
     build:web:
-      run: melos exec --scope="personal_budget_web" -- "dart run jaspr_cli:jaspr build"
+      run: melos exec --scope="personal_budget_web" -- "dart run jaspr_cli:jaspr build --dart-define=basePath=/personal_budget_fullstack"
       description: Build the static Jaspr site for production.
 
 dependency_overrides:
