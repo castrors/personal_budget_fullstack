@@ -5,7 +5,6 @@
 // Generated with jaspr_builder
 
 import 'package:jaspr/server.dart';
-import 'package:personal_budget_web/components/counter.dart' as _counter;
 import 'package:personal_budget_web/components/header.dart' as _header;
 import 'package:personal_budget_web/constants/theme.dart' as _theme;
 import 'package:personal_budget_web/pages/about.dart' as _about;
@@ -37,8 +36,8 @@ ServerOptions get defaultServerOptions => ServerOptions(
   styles: () => [
     ..._theme.styles,
     ..._app.App.styles,
-    ..._counter.CounterState.styles,
     ..._header.Header.styles,
     ..._about.About.styles,
+    ..._home.Home.styles,
   ],
 );

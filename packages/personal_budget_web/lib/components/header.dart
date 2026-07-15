@@ -14,11 +14,11 @@ class Header extends StatelessComponent {
     return header([
       nav([
         for (var route in [
-          (label: 'Home', path: '/'),
-          (label: 'About', path: '/about'),
+          (label: 'Home', path: '/', target: './'),
+          (label: 'About', path: '/about', target: 'about'),
         ])
           div(classes: activePath == route.path ? 'active' : null, [
-            Link(to: route.path, child: .text(route.label)),
+            Link(to: route.target, child: text(route.label)),
           ]),
       ]),
     ]);
