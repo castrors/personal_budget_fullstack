@@ -4,6 +4,7 @@ import 'package:jaspr_router/jaspr_router.dart';
 
 import '../constants/theme.dart';
 
+@client
 class Header extends StatelessComponent {
   const Header({super.key});
 

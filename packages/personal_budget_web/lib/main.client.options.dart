@@ -6,6 +6,7 @@
 
 import 'package:jaspr/client.dart';
 
+import 'package:personal_budget_web/components/header.dart' deferred as _header;
 import 'package:personal_budget_web/pages/about.dart' deferred as _about;
 import 'package:personal_budget_web/pages/home.dart' deferred as _home;
 
@@ -27,6 +28,10 @@ import 'package:personal_budget_web/pages/home.dart' deferred as _home;
 /// ```
 ClientOptions get defaultClientOptions => ClientOptions(
   clients: {
+    'header': ClientLoader(
+      (p) => _header.Header(),
+      loader: _header.loadLibrary,
+    ),
     'about': ClientLoader((p) => _about.About(), loader: _about.loadLibrary),
     'home': ClientLoader((p) => _home.Home(), loader: _home.loadLibrary),
   },
