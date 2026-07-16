@@ -13,10 +13,10 @@ class Home extends StatelessComponent {
       // 1. Hero Section
       div(classes: 'hero', [
         div(classes: 'hero-text', [
-          span(classes: 'badge', [text('✨ Antigravity Budget Full-Stack')]),
-          h1([text('Gerencie seu orçamento com estilo e simplicidade')]),
+          span(classes: 'badge', [Component.text('✨ Antigravity Budget Full-Stack')]),
+          h1([Component.text('Gerencie seu orçamento com estilo e simplicidade')]),
           p([
-            text(
+            Component.text(
               'O Antigravity Budget une o design Bento moderno ao Material Design 3, oferecendo um controle financeiro pessoal incrivelmente elegante e 100% open-source.'
             )
           ]),
@@ -25,12 +25,12 @@ class Home extends StatelessComponent {
               classes: 'btn btn-primary',
               href: 'https://github.com/castrors/personal_budget_fullstack',
               target: Target.blank,
-              [text('Ver no GitHub')]
+              [Component.text('Ver no GitHub')]
             ),
             a(
               classes: 'btn btn-secondary',
               href: '$basePath/about',
-              [text('Saber Mais')]
+              [Component.text('Saber Mais')]
             ),
           ]),
         ]),
@@ -42,51 +42,51 @@ class Home extends StatelessComponent {
             div(classes: 'mock-header', [
               div(classes: 'mock-profile', [
                 div(classes: 'mock-avatar', []),
-                span([text('Olá, João')]),
+                span([Component.text('Olá, João')]),
               ]),
               div(classes: 'mock-bell', []),
             ]),
 
             // Mock Balance Card
             div(classes: 'mock-card mock-balance-card', [
-              span(classes: 'card-label', [text('Saldo Total')]),
-              h2([text(r'R$ 12.450,80')]),
+              span(classes: 'card-label', [Component.text('Saldo Total')]),
+              h2([Component.text(r'R$ 12.450,80')]),
               div(classes: 'card-actions', [
-                div(classes: 'mock-btn mock-btn-white', [text('+ Adicionar')]),
-                div(classes: 'mock-btn mock-btn-trans', [text('⇄ Transferir')]),
+                div(classes: 'mock-btn mock-btn-white', [Component.text('+ Adicionar')]),
+                div(classes: 'mock-btn mock-btn-trans', [Component.text('⇄ Transferir')]),
               ]),
             ]),
 
             // Mock Split Card (Entradas / Saídas)
             div(classes: 'mock-split-row', [
               div(classes: 'mock-card split-col income-col', [
-                span(classes: 'card-label', [text('Entradas')]),
-                h3([text(r'R$ 8.200,00')]),
+                span(classes: 'card-label', [Component.text('Entradas')]),
+                h3([Component.text(r'R$ 8.200,00')]),
               ]),
               div(classes: 'mock-card split-col expense-col', [
-                span(classes: 'card-label', [text('Saídas')]),
-                h3([text(r'R$ 3.749,20')]),
+                span(classes: 'card-label', [Component.text('Saídas')]),
+                h3([Component.text(r'R$ 3.749,20')]),
               ]),
             ]),
 
             // Mock Transaction
             div(classes: 'mock-card mock-transactions-card', [
-              span(classes: 'card-label-dark', [text('Transações Recentes')]),
+              span(classes: 'card-label-dark', [Component.text('Transações Recentes')]),
               div(classes: 'mock-transaction-item', [
-                div(classes: 'tx-icon grocery', [text('🛒')]),
+                div(classes: 'tx-icon grocery', [Component.text('🛒')]),
                 div(classes: 'tx-info', [
-                  span(classes: 'tx-title', [text('Supermarket')]),
-                  span(classes: 'tx-date', [text('Hoje')]),
+                  span(classes: 'tx-title', [Component.text('Supermarket')]),
+                  span(classes: 'tx-date', [Component.text('Hoje')]),
                 ]),
-                span(classes: 'tx-amount expense', [text(r'- R$ 150,00')]),
+                span(classes: 'tx-amount expense', [Component.text(r'- R$ 150,00')]),
               ]),
               div(classes: 'mock-transaction-item', [
-                div(classes: 'tx-icon dining', [text('🍔')]),
+                div(classes: 'tx-icon dining', [Component.text('🍔')]),
                 div(classes: 'tx-info', [
-                  span(classes: 'tx-title', [text('Jantar com amigos')]),
-                  span(classes: 'tx-date', [text('Ontem')]),
+                  span(classes: 'tx-title', [Component.text('Jantar com amigos')]),
+                  span(classes: 'tx-date', [Component.text('Ontem')]),
                 ]),
-                span(classes: 'tx-amount expense', [text(r'- R$ 120,00')]),
+                span(classes: 'tx-amount expense', [Component.text(r'- R$ 120,00')]),
               ]),
             ]),
           ]),
@@ -95,28 +95,28 @@ class Home extends StatelessComponent {
 
       // 3. Bento Grid Features Section
       div(classes: 'features-section', [
-        h2(classes: 'section-title', [text('Por que escolher o Antigravity Budget?')]),
+        h2(classes: 'section-title', [Component.text('Por que escolher o Antigravity Budget?')]),
         div(classes: 'bento-grid', [
           div(classes: 'bento-item item-1', [
-            div(classes: 'bento-icon', [text('⚡')]),
-            h3([text('Performance Nativa')]),
-            p([text('Construído inteiramente em Dart/Flutter para máxima performance e feedback tátil fluido.')]),
+            div(classes: 'bento-icon', [Component.text('⚡')]),
+            h3([Component.text('Performance Nativa')]),
+            p([Component.text('Construído inteiramente em Dart/Flutter para máxima performance e feedback tátil fluido.')]),
           ]),
           div(classes: 'bento-item item-2', [
-            div(classes: 'bento-icon', [text('🎨')]),
-            h3([text('Design Bento M3')]),
-            p([text('Interface limpa baseada no conceito Bento e Material Design 3 para excelente legibilidade.')]),
+            div(classes: 'bento-icon', [Component.text('🎨')]),
+            h3([Component.text('Design Bento M3')]),
+            p([Component.text('Interface limpa baseada no conceito Bento e Material Design 3 para excelente legibilidade.')]),
             a(
               classes: 'bento-link',
               href: '$basePath/widgetbook/',
               target: Target.blank,
-              [text('Explorar Widgetbook ↗')]
+              [Component.text('Explorar Widgetbook ↗')]
             ),
           ]),
           div(classes: 'bento-item item-3', [
-            div(classes: 'bento-icon', [text('🔒')]),
-            h3([text('100% Seguro')]),
-            p([text('Seus dados financeiros permanecem sob seu controle local e no seu servidor de preferência.')]),
+            div(classes: 'bento-icon', [Component.text('🔒')]),
+            h3([Component.text('100% Seguro')]),
+            p([Component.text('Seus dados financeiros permanecem sob seu controle local e no seu servidor de preferência.')]),
           ]),
         ]),
       ]),

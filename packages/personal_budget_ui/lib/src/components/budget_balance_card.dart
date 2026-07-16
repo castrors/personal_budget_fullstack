@@ -37,7 +37,7 @@ class BudgetBalanceCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -55,7 +55,7 @@ class BudgetBalanceCard extends StatelessWidget {
               height: 192,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: colorScheme.primaryContainer.withOpacity(0.2),
+                color: colorScheme.primaryContainer.withValues(alpha: 0.2),
               ),
             ),
           ),
@@ -67,7 +67,7 @@ class BudgetBalanceCard extends StatelessWidget {
                 Text(
                   'SALDO TOTAL',
                   style: theme.textTheme.labelSmall?.copyWith(
-                    color: colorScheme.onPrimary.withOpacity(0.8),
+                    color: colorScheme.onPrimary.withValues(alpha: 0.8),
                     letterSpacing: 1.5,
                     fontWeight: FontWeight.bold,
                   ),

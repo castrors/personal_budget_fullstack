@@ -141,11 +141,11 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                   color: colorScheme.surfaceContainerLowest,
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: colorScheme.outlineVariant.withOpacity(0.3),
+                    color: colorScheme.outlineVariant.withValues(alpha: 0.3),
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.01),
+                      color: Colors.black.withValues(alpha: 0.01),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
@@ -239,7 +239,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                             boxShadow: _type == TransactionType.expense
                                 ? [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.04),
+                                      color: Colors.black.withValues(alpha: 0.04),
                                       blurRadius: 4,
                                       offset: const Offset(0, 2),
                                     )
@@ -276,7 +276,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
                             boxShadow: _type == TransactionType.income
                                 ? [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.04),
+                                      color: Colors.black.withValues(alpha: 0.04),
                                       blurRadius: 4,
                                       offset: const Offset(0, 2),
                                     )
@@ -372,10 +372,10 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer.withOpacity(0.08),
+                  color: colorScheme.primaryContainer.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: colorScheme.primaryContainer.withOpacity(0.2),
+                    color: colorScheme.primaryContainer.withValues(alpha: 0.2),
                   ),
                 ),
                 child: Row(
@@ -420,7 +420,7 @@ class _AddTransactionScreenState extends State<AddTransactionScreen> {
           color: colorScheme.surfaceContainerLowest,
           border: Border(
             top: BorderSide(
-              color: colorScheme.outlineVariant.withOpacity(0.2),
+              color: colorScheme.outlineVariant.withValues(alpha: 0.2),
               width: 0.5,
             ),
           ),

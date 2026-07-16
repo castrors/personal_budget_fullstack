@@ -30,13 +30,13 @@ class TransactionItem extends StatelessWidget {
 
   Color _getIconBackgroundColor(ColorScheme colorScheme) {
     if (transaction.type == TransactionType.income) {
-      return colorScheme.secondaryContainer.withOpacity(0.3);
+      return colorScheme.secondaryContainer.withValues(alpha: 0.3);
     }
     switch (transaction.category) {
       case TransactionCategory.grocery:
-        return colorScheme.primaryContainer.withOpacity(0.15);
+        return colorScheme.primaryContainer.withValues(alpha: 0.15);
       case TransactionCategory.dining:
-        return colorScheme.errorContainer.withOpacity(0.2);
+        return colorScheme.errorContainer.withValues(alpha: 0.2);
       case TransactionCategory.transport:
         return colorScheme.surfaceContainerHighest;
       case TransactionCategory.utilities:

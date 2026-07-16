@@ -50,11 +50,11 @@ class CategoryChip extends StatelessWidget {
 
     // Stitch-inspired custom styling for selection states
     final backgroundColor = isSelected 
-        ? colorScheme.primaryContainer.withOpacity(0.15) 
+        ? colorScheme.primaryContainer.withValues(alpha: 0.15) 
         : colorScheme.surfaceContainerLowest;
     final borderColor = isSelected 
         ? colorScheme.primary 
-        : colorScheme.outlineVariant.withOpacity(0.5);
+        : colorScheme.outlineVariant.withValues(alpha: 0.5);
     final textColor = isSelected 
         ? colorScheme.primary 
         : colorScheme.onSurface;
@@ -74,7 +74,7 @@ class CategoryChip extends StatelessWidget {
           boxShadow: [
             if (!isSelected)
               BoxShadow(
-                color: Colors.black.withOpacity(0.01),
+                color: Colors.black.withValues(alpha: 0.01),
                 blurRadius: 4,
                 offset: const Offset(0, 2),
               ),

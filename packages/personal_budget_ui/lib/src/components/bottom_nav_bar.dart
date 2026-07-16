@@ -32,7 +32,7 @@ class BottomNavBar extends StatelessWidget {
             Icon(
               Icons.add_circle,
               size: 40,
-              color: isSelected ? colorScheme.primary : colorScheme.primary.withOpacity(0.8),
+              color: isSelected ? colorScheme.primary : colorScheme.primary.withValues(alpha: 0.8),
             ),
             Text(
               label,
@@ -56,7 +56,7 @@ class BottomNavBar extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         decoration: isSelected
             ? BoxDecoration(
-                color: colorScheme.secondaryContainer.withOpacity(0.3),
+                color: colorScheme.secondaryContainer.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(12),
               )
             : null,
@@ -98,7 +98,7 @@ class BottomNavBar extends StatelessWidget {
         borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 16,
             offset: const Offset(0, -4),
           ),
