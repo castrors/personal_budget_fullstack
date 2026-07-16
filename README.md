@@ -7,6 +7,7 @@ Este é um monorepo Dart e Flutter estruturado com o **Melos**, contendo todos o
 ## 🔗 Links do Projeto
 
 * **Landing Page:** [https://castrors.github.io/personal_budget_fullstack/](https://castrors.github.io/personal_budget_fullstack/)
+* **App Demo (Aplicativo Web):** [https://castrors.github.io/personal_budget_fullstack/app/](https://castrors.github.io/personal_budget_fullstack/app/)
 * **Widgetbook (Catálogo do Design System):** [https://castrors.github.io/personal_budget_fullstack/widgetbook/](https://castrors.github.io/personal_budget_fullstack/widgetbook/)
 
 ---
@@ -60,7 +61,7 @@ O repositório está subdividido no diretório `packages/` com as seguintes resp
 | :--- | :--- | :--- |
 | [`personal_budget_core`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_core) | Pure Dart | Regras de negócio essenciais, enums de categorias/tipos e modelos de dados comuns (ex: `Transaction`). |
 | [`personal_budget_ui`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_ui) | Flutter | Design System central contendo componentes visuais customizados (botões, cards, chips, navegação) e o tema central. [Ver Widgetbook Live ↗](https://castrors.github.io/personal_budget_fullstack/widgetbook/) |
-| [`personal_budget_app`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_app) | Flutter App | Aplicativo nativo mobile principal (Android/iOS) que consome o Design System e implementa as telas de fluxo financeiro. |
+| [`personal_budget_app`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_app) | Flutter App | Aplicativo nativo mobile principal (Android/iOS) que consome o Design System. [Testar App Web ↗](https://castrors.github.io/personal_budget_fullstack/app/) |
 | [`personal_budget_web`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_web) | Jaspr (Web) | Landing Page pública construída com Jaspr (compilada de forma estática para publicação otimizada via GitHub Pages). |
 | [`personal_budget_api`](file:///Users/de-souza-castror/Projects/personal/personal_budget_fullstack/packages/personal_budget_api) | Dart Frog | Servidor de endpoints REST estruturado com Dart Frog para provisionar persistência e integração com bancos de dados. |
 

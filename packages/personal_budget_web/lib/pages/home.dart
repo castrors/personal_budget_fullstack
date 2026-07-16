@@ -101,6 +101,12 @@ class Home extends StatelessComponent {
             div(classes: 'bento-icon', [Component.text('⚡')]),
             h3([Component.text('Performance Nativa')]),
             p([Component.text('Construído inteiramente em Dart/Flutter para máxima performance e feedback tátil fluido.')]),
+            a(
+              classes: 'bento-link',
+              href: '$basePath/app/',
+              target: Target.blank,
+              [Component.text('Abrir App Demo ↗')]
+            ),
           ]),
           div(classes: 'bento-item item-2', [
             div(classes: 'bento-icon', [Component.text('🎨')]),

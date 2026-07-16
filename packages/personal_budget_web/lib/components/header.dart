@@ -21,6 +21,9 @@ class Header extends StatelessComponent {
             a(href: route.target, [Component.text(route.label)]),
           ]),
         div([
+          a(href: '$basePath/app/', target: Target.blank, [Component.text('App Demo ↗')]),
+        ]),
+        div([
           a(href: '$basePath/widgetbook/', target: Target.blank, [Component.text('Widgetbook ↗')]),
         ]),
       ]),

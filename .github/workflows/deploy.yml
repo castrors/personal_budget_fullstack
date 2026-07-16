@@ -53,6 +53,16 @@ jobs:
           mkdir -p packages/personal_budget_web/build/jaspr/widgetbook
           cp -r packages/personal_budget_ui/widgetbook/build/web/* packages/personal_budget_web/build/jaspr/widgetbook/
 
+      - name: Build Flutter App Web
+        run: |
+          cd packages/personal_budget_app
+          flutter build web --release --base-href "/personal_budget_fullstack/app/"
+
+      - name: Copy App to Web Build Directory
+        run: |
+          mkdir -p packages/personal_budget_web/build/jaspr/app
+          cp -r packages/personal_budget_app/build/web/* packages/personal_budget_web/build/jaspr/app/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
