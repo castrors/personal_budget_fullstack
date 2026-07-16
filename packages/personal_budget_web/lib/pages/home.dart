@@ -106,6 +106,12 @@ class Home extends StatelessComponent {
             div(classes: 'bento-icon', [text('🎨')]),
             h3([text('Design Bento M3')]),
             p([text('Interface limpa baseada no conceito Bento e Material Design 3 para excelente legibilidade.')]),
+            a(
+              classes: 'bento-link',
+              href: '$basePath/widgetbook/',
+              target: Target.blank,
+              [text('Explorar Widgetbook ↗')]
+            ),
           ]),
           div(classes: 'bento-item item-3', [
             div(classes: 'bento-icon', [text('🔒')]),
@@ -448,6 +454,19 @@ class Home extends StatelessComponent {
         lineHeight: 1.5.em,
         color: const Color('#41474D'),
       ),
+      css('.bento-link', [
+        css('&').styles(
+          fontSize: 0.95.rem,
+          fontWeight: .w700,
+          color: const Color('#004AC6'),
+          textDecoration: TextDecoration(line: .none),
+          margin: .only(top: .auto),
+          padding: .only(top: 8.px),
+        ),
+        css('&:hover').styles(
+          textDecoration: TextDecoration(line: .underline),
+        ),
+      ]),
     ]),
   ];
 }
