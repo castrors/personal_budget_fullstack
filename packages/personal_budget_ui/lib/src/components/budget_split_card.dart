@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class BudgetSplitCard extends StatelessWidget {
   const BudgetSplitCard({
@@ -144,18 +143,4 @@ class BudgetSplitCard extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: BudgetSplitCard,
-)
-Widget buildBudgetSplitCardUseCase(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Center(
-      child: BudgetSplitCard(
-        income: 8200.00,
-        expense: 3749.20,
-      ),
-    ),
-  );
-}
+

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
@@ -149,15 +148,4 @@ class BottomNavBar extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: BottomNavBar,
-)
-Widget buildBottomNavBarUseCase(BuildContext context) {
-  return Scaffold(
-    bottomNavigationBar: BottomNavBar(
-      currentIndex: 0,
-      onTap: (_) {},
-    ),
-  );
-}
+

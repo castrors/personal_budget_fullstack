@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class BudgetBalanceCard extends StatelessWidget {
   const BudgetBalanceCard({
@@ -121,19 +120,4 @@ class BudgetBalanceCard extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: BudgetBalanceCard,
-)
-Widget buildBudgetBalanceCardUseCase(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Center(
-      child: BudgetBalanceCard(
-        balance: 12450.80,
-        onAddPressed: () {},
-        onTransferPressed: () {},
-      ),
-    ),
-  );
-}
+

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:personal_budget_core/personal_budget_core.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class TransactionItem extends StatelessWidget {
   const TransactionItem({
@@ -160,39 +159,4 @@ class TransactionItem extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: TransactionItem,
-)
-Widget buildTransactionItemUseCase(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Column(
-      children: [
-        TransactionItem(
-          transaction: Transaction(
-            id: '1',
-            title: 'Salário Mensal',
-            amount: 8200.00,
-            date: DateTime(2023, 10, 5),
-            category: TransactionCategory.utilities, // Represented as cash here
-            type: TransactionType.income,
-          ),
-          onTap: () {},
-        ),
-        const SizedBox(height: 8),
-        TransactionItem(
-          transaction: Transaction(
-            id: '2',
-            title: 'Supermercado Pão de Açúcar',
-            amount: 450.20,
-            date: DateTime(2023, 10, 8),
-            category: TransactionCategory.grocery,
-            type: TransactionType.expense,
-          ),
-          onTap: () {},
-        ),
-      ],
-    ),
-  );
-}
+

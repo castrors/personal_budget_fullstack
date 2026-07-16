@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class BudgetButton extends StatelessWidget {
   const BudgetButton({
@@ -26,15 +25,4 @@ class BudgetButton extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: BudgetButton,
-)
-Widget buildBudgetButtonUseCase(BuildContext context) {
-  return Center(
-    child: BudgetButton(
-      label: 'Clique aqui',
-      onPressed: () {},
-    ),
-  );
-}
+

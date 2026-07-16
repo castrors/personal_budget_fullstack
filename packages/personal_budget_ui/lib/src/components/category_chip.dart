@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:personal_budget_core/personal_budget_core.dart';
-import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
 class CategoryChip extends StatelessWidget {
   const CategoryChip({
@@ -104,30 +103,4 @@ class CategoryChip extends StatelessWidget {
   }
 }
 
-@widgetbook.UseCase(
-  name: 'Default',
-  type: CategoryChip,
-)
-Widget buildCategoryChipUseCase(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(16.0),
-    child: Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CategoryChip(
-            category: TransactionCategory.grocery,
-            isSelected: true,
-            onSelected: (_) {},
-          ),
-          const SizedBox(width: 12),
-          CategoryChip(
-            category: TransactionCategory.dining,
-            isSelected: false,
-            onSelected: (_) {},
-          ),
-        ],
-      ),
-    ),
-  );
-}
+

@@ -36,6 +36,8 @@ dependencies:
   widgetbook_annotation: ^3.0.0
   personal_budget_ui:
     path: ../
+  personal_budget_core:
+    path: ../../personal_budget_core
 
 dev_dependencies:
   flutter_test:
