@@ -43,6 +43,16 @@ jobs:
       - name: Build Web App
         run: melos run build:web
 
+      - name: Build Widgetbook Web
+        run: |
+          cd packages/personal_budget_ui/widgetbook
+          flutter build web --release --base-href "/personal_budget_fullstack/widgetbook/"
+
+      - name: Copy Widgetbook to Web Build Directory
+        run: |
+          mkdir -p packages/personal_budget_web/build/jaspr/widgetbook
+          cp -r packages/personal_budget_ui/widgetbook/build/web/* packages/personal_budget_web/build/jaspr/widgetbook/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
